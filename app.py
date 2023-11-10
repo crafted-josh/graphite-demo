@@ -9,7 +9,10 @@ feature_flags = {
 if feature_flags.get("new_page_flag"):
     @app.route('/new_page')
     def newpage():
-        return render_template('new_page.html')
+        # Simulate backend data processing
+        items = ["Item 1", "Item 2", "Item 3"]
+        return render_template('new_page.html', items=items)
+
 
 @app.route('/')
 def index():
